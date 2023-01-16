@@ -1,24 +1,9 @@
-# README
+# Heavy Night Boardgame Planning WebApp
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+I learnt ruby & rails to make this so don't expect it to make sense
 
-Things you may want to cover:
+* Ruby version 3.1.0 / Rails 7.0.4
 
-* Ruby version
+* Started 16/1/23
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* By Rob Boyce
