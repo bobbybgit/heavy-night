@@ -2,6 +2,9 @@
 <html>
   <head>
     <title>HeavyNight</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;600;800&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,8 +14,16 @@
   </head>
 
   <body>
-    <div id="header"></div>
+    <div id="header">
+      <div id="logo_box"><h1>Heavy Night</h1>
+      <p id="logo_tag">Board Game Event Planner</p>
+      </div>
+    <ul id="header_links">
+      <li>Groups</li>
+      <li>Events</li>
+      <li>My Profile</li>
+    </ul></div>
     <%= yield %>
-    <div id="footer"></div>
+    <div id="footer">By Rob Boyce 2023</div>
   </body>
 </html>
