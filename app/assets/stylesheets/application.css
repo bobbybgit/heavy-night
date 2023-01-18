@@ -67,18 +67,14 @@
      min-height: 4rem;
      letter-spacing: 0.2rem;
      justify-content: space-between;
+     
+ }
+ 
+ #header_plus_menu{
      position: fixed;
      top: 0;
      left: 0;
      right: 0;
- }
- 
- #logo_box{
-     display: flex;
-     flex-direction: row;
-     justify-content: center;
-     align-items: center;
-     margin: 0.75rem 0;
  }
  
  @media screen and (max-width: 750px) {
@@ -102,14 +98,31 @@
   -webkit-font-smoothing: antialiased;
 }
 
+#header:focus-within ~ #mobile_menu{
+    display: flex;
+}
+
 #mobile_menu{
     background-color: #4DA1A9;
     color: #FFFFFF;
-    display: flex;
+    display: none;
     flex-direction: column;
     flex: 0;
     align-items: center;
+    justify-content: center;
     padding: 0 1rem;
+    
+}
+
+#mobile_menu div{
+    min-width: 100vw;
+    border-style: solid;
+    border-width: 2px 2px 0 2px;
+    border-color: #FFFFF;
+    margin: 0;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
 }
 
 @media screen and (max-width: 750px) {

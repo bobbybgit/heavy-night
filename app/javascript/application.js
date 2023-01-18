@@ -2,16 +2,23 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 
-let menuOpen = false;
-const menuButton = document.querySelector("#mobile_burger");
+/*let menuOpen = false;
+const menuButton = document.querySelector("#header_links");
 const menuBar = document.querySelector("#mobile_menu");
 
 function menuToggle() {
-    menuOpen?menuBar.style.display("none"):menuBar.style.display ="flex";
-    
+    if (menuOpen) {
+        menuBar.style.display = "none";
+        menuOpen = false;
+        console.log("menuOpen")
+    }else{
+        menuBar.style.display ="flex";
+        menuOpen = true;
+        console.log(menuOpen)
+    }
 }
 
-menuButton.addEventListener("touchStart", menuToggle());
+menuButton.ontouchstart = menuToggle();*/
 
 
 
