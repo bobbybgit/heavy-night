@@ -1,9 +1,8 @@
 <div id="<%= dom_id group %>">
-  <p>
-    <strong>Name:</strong>
+  <div class="card_header">
     <%= group.name %>
-  </p>
-
+  </div>
+  <div class="card_contents">
   <p>
     <strong>Location:</strong>
     <%= group.location %>
@@ -14,9 +13,6 @@
     <%= group.description %>
   </p>
 
-  <p>
-    <strong>Private:</strong>
-    <%= group.private %>
-  </p>
+  </div>
 
 </div>

@@ -1,14 +1,20 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Groups</h1>
+<h1 class="page_title">Groups</h1>
 
 <div id="groups">
   <% @groups.each do |group| %>
+  <%if !group.private %>
+  <div class="group_card card">
     <%= render group %>
-    <p>
+    <p class=show_link>
       <%= link_to "Show this group", group %>
     </p>
+    </div>
+    <% end %>
   <% end %>
+  
+  
 </div>
 
 <%= link_to "New group", new_group_path %>

@@ -15,8 +15,9 @@
   </head>
 
   <body>
+    <div class="header"></div>
     <div id="header_plus_menu">
-    <div id="header">
+    <div class="header">
       <h1>HEAVY NIGHT</h1>
       <ul id="header_links">
         <li class="desktop">Groups</li>
@@ -31,7 +32,10 @@
         <div class="mobile">Events</li></div>
     </div>
     </div>
-    <%= yield %>
+    
+    <div id="main_window">
+      <%= yield %>
+    </div>
     <div id="footer">By Rob Boyce 2023</div>
   </body>
 </html>
