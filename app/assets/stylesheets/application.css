@@ -98,10 +98,6 @@
   -webkit-font-smoothing: antialiased;
 }
 
-#header:focus-within ~ #mobile_menu{
-    display: flex;
-}
-
 #mobile_menu{
     background-color: #4DA1A9;
     color: #FFFFFF;

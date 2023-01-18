@@ -2,7 +2,7 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 
-/*let menuOpen = false;
+let menuOpen = false;
 const menuButton = document.querySelector("#header_links");
 const menuBar = document.querySelector("#mobile_menu");
 
@@ -18,7 +18,7 @@ function menuToggle() {
     }
 }
 
-menuButton.ontouchstart = menuToggle();*/
+menuButton.ontouchstart = menuToggle;
 
 
 
