@@ -102,6 +102,16 @@
   -webkit-font-smoothing: antialiased;
 }
 
+#mobile_menu{
+    background-color: #4DA1A9;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    flex: 0;
+    align-items: center;
+    padding: 0 1rem;
+}
+
 @media screen and (max-width: 750px) {
   #mobile_burger {display: inline-block;}
 }
