@@ -2,6 +2,9 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 
+
+document.addEventListener("turbo:load", function() {
+    console.log("turbo loaded")
 let menuOpen = false;
 const menuButton = document.querySelector("#header_links");
 const menuBar = document.querySelector("#mobile_menu");
@@ -20,6 +23,6 @@ function menuToggle() {
 
 menuButton.ontouchstart = menuToggle;
 
-
+})
 
 
