@@ -6,6 +6,7 @@
   <% @groups.each do |group| %>
   <%if !group.private %>
   <div class="group_card card">
+    <div class="profile_pic" id="generic_profile_pic" src=".app/assets/images/pp_generic" alt="a group of meeples, no profile picture provided"></div>
     <%= render group %>
     <p class=show_link>
       <%= link_to "Show this group", group %>
