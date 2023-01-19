@@ -5,17 +5,20 @@
 <div id="groups">
   <% @groups.each do |group| %>
   <%if !group.private %>
+  <%= link_to group do%>
   <div class="group_card card">
     <div class="profile_pic" id="generic_profile_pic" src=".app/assets/images/pp_generic" alt="a group of meeples, no profile picture provided"></div>
     <%= render group %>
-    <p class=show_link>
-      <%= link_to "Show this group", group %>
-    </p>
-    </div>
+  </div>
+    <% end %>
     <% end %>
   <% end %>
   
   
 </div>
 
-<%= link_to "New group", new_group_path %>
+<%= link_to new_group_path do %>
+<button class = "new_btn">New Group
+  <span class="new_icon">add</span>
+</button>
+<% end %>
