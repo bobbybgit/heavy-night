@@ -8,6 +8,7 @@ document.addEventListener("turbo:load", function() {
 let menuOpen = false;
 const menuButton = document.querySelector("#header_links");
 const menuBar = document.querySelector("#mobile_menu");
+menuBar.style.display = "none";
 
 function menuToggle() {
     if (menuOpen) {
