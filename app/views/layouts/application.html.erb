@@ -29,9 +29,11 @@
       </ul>
     </div>
     <div id="mobile_menu">
-        <div class="mobile">My Profile</li></div>
-        <div class="mobile">Groups</li></div>
-        <div class="mobile">Events</li></div>
+        <div class="mobile">My Profile</div>
+        <div class="mobile">
+          <%= link_to "Groups", groups_path, :class => "header_link_to" %>
+        </div>
+        <div class="mobile">Events</div>
     </div>
     </div>
     
