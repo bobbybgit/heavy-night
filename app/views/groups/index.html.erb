@@ -8,7 +8,23 @@
   <%= link_to group do%>
   <div class="group_card card">
     <div class="profile_pic" id="generic_profile_pic" src=".app/assets/images/pp_generic" alt="a group of meeples, no profile picture provided"></div>
-    <%= render group %>
+    <div id="<%= dom_id group %>">
+  <div class="card_header">
+    
+    <%= group.name %>
+  </div>
+  <div class="card_contents">
+  <p>
+    <%= group.location %>
+  </p>
+
+  <p>
+    <%= group.description.length < 50 ? group.description: group.description[0,51]+" ..." %>
+  </p>
+
+  </div>
+
+</div>
   </div>
     <% end %>
     <% end %>
