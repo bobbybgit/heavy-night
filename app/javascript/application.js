@@ -6,7 +6,7 @@ import "controllers"
 document.addEventListener("turbo:load", function() {
     console.log("turbo loaded")
 let menuOpen = false;
-const menuButton = document.querySelector("#header_links");
+const menuButton = document.querySelector("#mobile_burger");
 const menuBar = document.querySelector("#mobile_menu");
 menuBar.style.display = "none";
 
