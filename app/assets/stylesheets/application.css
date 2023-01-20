@@ -319,3 +319,41 @@
     justify-content: center;
 }
 
+.form_string, .form_text{
+    border-style: none;
+    border-bottom: 2px solid #DF9A57;
+    background-color: rgba(223, 154, 87, 0.2);
+    width: 200px;
+}
+
+.check_box_group{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    margin-top: 0.5rem;
+    max-width: 202px;
+}
+
+#form_window{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 300px;
+}
+
+.field_with_errors{
+    display: flex;
+    justify-content: center;
+}
+
+.form_group{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#group_private{
+    margin: 0;
+}

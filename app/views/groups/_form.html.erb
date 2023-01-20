@@ -1,7 +1,8 @@
+<div id="form_window">
 <%= form_with(model: group) do |form| %>
   <% if group.errors.any? %>
     <div style="color: red">
-      <h2><%= pluralize(group.errors.count, "error") %> prohibited this group from being saved:</h2>
+      <h4><%= pluralize(group.errors.count, "error") %> prohibited this group from being saved:</h2>
 
       <ul>
         <% group.errors.each do |error| %>
@@ -11,27 +12,29 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+  <div class="form_group">
+    <%= form.label :name, style: "display: block; width: 200px" %>
+    <%= form.text_field :name, :class => "form_string" %>
   </div>
 
-  <div>
-    <%= form.label :location, style: "display: block" %>
-    <%= form.text_field :location %>
+  <div class="form_group">
+    <%= form.label :location, style: "display: block; width: 200px" %>
+    <%= form.text_field :location, :class => "form_string" %>
   </div>
 
-  <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_area :description %>
+  <div class="form_group">
+    <%= form.label :description, style: "display: block; width: 200px" %>
+    <%= form.text_area :description, :class => "form_text" %>
   </div>
 
-  <div>
+  <div class="check_box_group">
     <%= form.label :private, style: "display: block" %>
-    <%= form.check_box :private %>
+    <%= form.check_box :private, :class => "form_check" %>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div class="button_group">
+    <%= form.submit "Create", :class => "square_button" %>
+  </div>
   </div>
 <% end %>
+
