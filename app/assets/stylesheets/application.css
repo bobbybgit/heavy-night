@@ -21,6 +21,20 @@
      background-color: #FFFFFF;
      font-family: 'Roboto', sans-serif;
      margin: 0;
+     justify-content: flex-start;
+ }
+ 
+ .notice{
+     margin: 0.5rem;
+     text-align: center;
+ }
+ 
+ .header_link_to{
+      font-family: 'Roboto', sans-serif;
+      font-size: 18px;
+      color: #FFFFFF;
+      text-decoration: none;
+     
  }
  
  .header, #footer{
@@ -85,7 +99,7 @@
 
 }
 
-#mobile_burger, .new_icon {
+#mobile_burger{
   display:none;
   font-family: 'Material Icons';
   font-weight: normal;
@@ -102,8 +116,26 @@
   color: #FFFFFF;
 }
 
+ .new_btn span{
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 36px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  color: #FFFFFF;
+  vertical-align: middle;
+ }
+ 
+
 #main_window{
-    margin: 3rem;
+    margin: 1rem 3rem;
     padding: 1rem;
     background-color: #FFFFFF;
     flex: 1;
@@ -159,7 +191,7 @@
     border-width: 2px 2px 0 2px;
     border-color: #FFFFFF;
     margin: 0;
-    padding: 4px;
+    padding: 10px;
     display: flex;
     justify-content: center;
 }
@@ -204,8 +236,8 @@
 }
 
 .new_btn{
-    background-color: #B1E5FC;
-    border-radius: 8px;
+    background-color: #DF9A57;
+    border-radius: 50%;
     border: 0;
     padding: 10px;
     font-weight: normal;
@@ -219,5 +251,8 @@
     direction: ltr;
     color: #FFFFFF;
     margin: 10px;
+    position: fixed;
+    bottom: 3rem;
+    right: 2rem;
 }
 

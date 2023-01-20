@@ -20,7 +20,9 @@
     <div class="header">
       <h1>HEAVY NIGHT</h1>
       <ul id="header_links">
-        <li class="desktop">Groups</li>
+        <li class="desktop">
+          <%= link_to "Groups", groups_path, :class => "header_link_to" %>
+        </li>
         <li class="desktop">Events</li>
         <li class="desktop">My Profile</li>
         <li id="mobile_burger"><a tabindex="0">menu</a></li>
