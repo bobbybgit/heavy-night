@@ -156,8 +156,10 @@
 }
 
 .profile_pic{
-    width:250px;
-    height:250px;
+    min-width:250px;
+    min-height:250px;
+    max-width:250px;
+    max-height:250px;
     margin:0;
     padding:0;
     background-color: #B1E5FC;
@@ -171,6 +173,49 @@
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+
+.group_display{
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 2rem;
+    border-bottom: 5px solid #DF9A57;
+    margin-bottom: 2rem;
+}
+
+.group_display .profile_pic{
+    margin: 2rem;
+}
+
+#group_container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 1;
+    margin-top: 2rem;
+}
+
+#group_container h1{
+    margin:0;
+}
+
+#group_details{
+    display: flex;
+    flex: 1;
+}
+
+#group_pp{
+    flex: 0;
+}
+
+.item_header{
+    display: inline-block;
+    margin: 0.5rem;
+    padding: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
 }
 
 #mobile_menu{
@@ -255,5 +300,22 @@
     position: fixed;
     bottom: 3rem;
     right: 2rem;
+}
+
+.square_button{
+    background-color: #DF9A57;
+    border: solid 2px #CE8946;
+    border-radius: 4px;
+    padding: 10px;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    color: #FFFFFF;
+    margin: 10px;
+}
+
+.button_group{
+    display: flex;
+    justify-content: center;
 }
 

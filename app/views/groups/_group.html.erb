@@ -1,9 +1,12 @@
 <div id="<%= dom_id group %>">
-  <div class="card_header">
+  <div class="single_item_window">
     
+  <div class="group_display">
+  <div class="profile_pic" id="group_pp"></div>
+  <div id="group_container">
+  <h1 class ="item_header" id="group_item_header">
     <%= group.name %>
-  </div>
-  <div class="card_contents">
+    </h1>
   <p>
     <%= group.location %>
   </p>
@@ -11,6 +14,13 @@
   <p>
     <%= group.description %>
   </p>
+  </div>
+  </div>
+  <div class="button_group" id="group_buttons">
+  <button class="square_button" #id="group_edit_button">Edit</button>
+  <button class="square_button" #id="group_delete_button">Delete</button>
+  <button class="square_button" #id="group_join_leave_button">Join</button>
+  </div>
 
   </div>
 
