@@ -18,7 +18,9 @@
     <div class="header"></div>
     <div id="header_plus_menu">
     <div class="header">
-      <h1>HEAVY NIGHT</h1>
+      <%= link_to root_path, :class => "site_name" do %>
+        <h1>HEAVY NIGHT</h1>
+        <% end %>
       <ul id="header_links">
         <li class="desktop">
           <%= link_to "Groups", groups_path, :class => "header_link_to" %>
