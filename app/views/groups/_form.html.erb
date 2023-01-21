@@ -1,4 +1,4 @@
-<div id="form_window">
+
 <%= form_with(model: group) do |form| %>
   <% if group.errors.any? %>
     <div style="color: red">
@@ -11,7 +11,7 @@
       </ul>
     </div>
   <% end %>
-
+  <div id="form_window">
   <div class="form_group">
     <%= form.label :name, style: "display: block; width: 200px" %>
     <%= form.text_field :name, :class => "form_string" %>
@@ -27,9 +27,11 @@
     <%= form.text_area :description, :class => "form_text" %>
   </div>
 
+  <div id="form_check_center">
   <div class="check_box_group">
     <%= form.label :private, style: "display: block" %>
     <%= form.check_box :private, :class => "form_check" %>
+  </div>
   </div>
 
   <div class="button_group">
