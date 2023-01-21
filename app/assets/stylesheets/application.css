@@ -234,7 +234,7 @@
     
 }
 
-#mobile_menu div{
+#mobile_menu div {
     min-width: 100vw;
     border-style: solid;
     border-width: 2px 2px 0 2px;
@@ -245,9 +245,6 @@
     justify-content: center;
 }
 
-#mobile_menu div:last-child{
-    border-bottom-width: 2px
-}
 
 @media screen and (max-width: 750px) {
   #mobile_burger {display: inline-block;}
@@ -366,5 +363,12 @@
     min-width: 200px;
     justify-content: center;
     flex: 0;
+
+}
+
+.mobile_link_to{
+    text-decoration: none;
+    font-size: 20px;
+    color: #FFFFFF;
 
 }

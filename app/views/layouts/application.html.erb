@@ -32,9 +32,9 @@
     </div>
     <div id="mobile_menu">
         <div class="mobile">My Profile</div>
-        <div class="mobile">
-          <%= link_to "Groups", groups_path, :class => "header_link_to" %>
-        </div>
+        <%= link_to groups_path, :class => "mobile_link_to" do %>
+                  <div class="mobile">Groups</div>
+        <% end %>
         <div class="mobile">Events</div>
     </div>
     </div>
