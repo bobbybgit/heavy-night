@@ -17,7 +17,7 @@
   </div>
   </div>
   <div class="button_group" id="group_buttons">
-  <button class="square_button" #id="group_edit_button">Edit</button>
+  <%= button_to "Edit", edit_group_path, :class => "square_button", :method => :get %> 
   <button class="square_button" #id="group_delete_button">Delete</button>
   <button class="square_button" #id="group_join_leave_button">Join</button>
   </div>
