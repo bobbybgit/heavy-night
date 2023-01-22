@@ -144,7 +144,6 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     
 }
@@ -317,15 +316,24 @@
 .button_group{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .form_string, .form_text{
     border-style: none;
     border-bottom: 2px solid #DF9A57;
     background-color: rgba(223, 154, 87, 0.2);
-    width: 250px;
+    max-width: 75vw;
+    width: 400px;
     font-size: 16px;
     line-height: 28px;
+    font-family: 'Roboto', sans-serif;
+    flex: auto;
+    margin-bottom: 5px;
+}
+
+.form_text{
+    height: 210px;
 }
 
 .check_box_group{
@@ -333,7 +341,8 @@
     justify-content: space-between;
     margin-bottom: 2rem;
     margin-top: 0.5rem;
-    max-width: 252px;
+    max-width: 75vw;
+    width: 400px;
     flex: 1;
 }
 

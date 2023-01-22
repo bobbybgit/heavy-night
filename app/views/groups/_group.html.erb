@@ -18,8 +18,9 @@
   </div>
   <div class="button_group" id="group_buttons">
   <%= button_to "Edit", edit_group_path, :class => "square_button", :method => :get %> 
-  <button class="square_button" #id="group_delete_button">Delete</button>
+  <%= button_to "Delete", group_path, :class => "square_button", :method => :delete %> 
   <button class="square_button" #id="group_join_leave_button">Join</button>
+  <%= button_to "All Groups", groups_path, :class => "square_button", :method => :get %>
   </div>
 
   </div>
