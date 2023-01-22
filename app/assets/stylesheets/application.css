@@ -323,7 +323,9 @@
     border-style: none;
     border-bottom: 2px solid #DF9A57;
     background-color: rgba(223, 154, 87, 0.2);
-    width: 200px;
+    width: 250px;
+    font-size: 16px;
+    line-height: 28px;
 }
 
 .check_box_group{
@@ -331,7 +333,7 @@
     justify-content: space-between;
     margin-bottom: 2rem;
     margin-top: 0.5rem;
-    max-width: 202px;
+    max-width: 252px;
     flex: 1;
 }
 
@@ -360,7 +362,7 @@
 
 #form_check_center{
     display: flex;
-    min-width: 200px;
+    min-width: 250px;
     justify-content: center;
     flex: 0;
 
