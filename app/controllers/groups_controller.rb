@@ -1,5 +1,6 @@
 class GroupsController < ApplicationController
   before_action :set_group, only: %i[ show edit update destroy ]
+  include CarrierWave::MiniMagick
 
   # GET /groups or /groups.json
   def index
@@ -34,7 +35,7 @@ class GroupsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /groups/1 or /groups/1.json
+   # PATCH/PUT /groups/1 or /groups/1.json
   def update
     respond_to do |format|
       if @group.update(group_params)
@@ -65,6 +66,6 @@ class GroupsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def group_params
-      params.require(:group).permit(:name, :location, :description, :private)
+      params.require(:group).permit(:name, :location, :description, :private, :image)
     end
 end

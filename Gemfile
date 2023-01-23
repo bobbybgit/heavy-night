@@ -74,3 +74,8 @@ end
 group :production do
   gem "pg"
 end
+
+gem "carrierwave"
+
+gem "mini_magick"
+

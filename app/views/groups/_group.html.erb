@@ -2,7 +2,9 @@
   <div class="single_item_window">
     
   <div class="group_display">
-  <div class="profile_pic" id="group_pp"></div>
+  <div class="profile_pic" id="group_pp">
+  <%= image_tag group.image_url.to_s %>
+  </div>
   <div id="group_container">
   <h1 class ="item_header" id="group_item_header">
     <%= group.name %>

@@ -27,13 +27,17 @@
     <%= form.text_area :description, :class => "form_text" %>
   </div>
 
+  <div>
+  <%= form.file_field :image %>
+  </div>
+
   <div id="form_check_center">
   <div class="check_box_group">
     <%= form.label :private, style: "display: block" %>
     <%= form.check_box :private, :class => "form_check" %>
   </div>
   </div>
-
+ 
   <div class="button_group">
     <%= form.submit "Save", :class => "square_button" %>
   </div>
