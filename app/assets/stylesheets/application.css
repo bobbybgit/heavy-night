@@ -312,12 +312,12 @@
     background-color: #DF9A57;
     border: solid 2px #CE8946;
     border-radius: 4px;
-    padding: 10px;
+    padding: 6px 10px;
     font-weight: normal;
     font-style: normal;
-    font-size: 24px;
+    font-size: 14px;
     color: #FFFFFF;
-    margin: 10px;
+    margin: 6px;
 }
 
 .button_group{
@@ -389,4 +389,21 @@
     font-size: 20px;
     color: #FFFFFF;
 
+}
+
+.explanation{
+    font-style: italic;
+    font-size: 12px;
+    margin-top: 0;
+}
+
+.input_container{
+    width: 400px;
+    flex: 0;
+    max-width: 75vw;
+}
+
+h4{
+    display: inline-block;
+    margin-bottom: 0.5rem;
 }
