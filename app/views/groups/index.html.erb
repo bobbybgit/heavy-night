@@ -7,8 +7,8 @@
   <%if !group.private %>
   <%= link_to group do%>
   <div class="group_card card">
-  <%= image_tag group.image_url.to_s %>
-    <div id="<%= dom_id group %>">
+  <%= image_tag(group.image_url.to_s, :class => "image_250") %>
+  <div id="<%= dom_id group %>">
   <div class="card_header">
     
     <%= group.name %>
