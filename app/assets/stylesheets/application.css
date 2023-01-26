@@ -416,3 +416,7 @@ h4{
 .alert-failure{
     color: red;
 }
+.actions{
+    display: flex;
+    justify-content: center;
+}
