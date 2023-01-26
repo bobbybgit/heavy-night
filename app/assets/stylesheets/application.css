@@ -408,3 +408,11 @@ h4{
     display: inline-block;
     margin-bottom: 0.5rem;
 }
+
+.alert-success{
+    color: green;
+}
+
+.alert-failure{
+    color: red;
+}
