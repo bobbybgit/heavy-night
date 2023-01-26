@@ -26,7 +26,15 @@
           <%= link_to "Groups", groups_path, :class => "header_link_to" %>
         </li>
         <li class="desktop">Events</li>
-        <li class="desktop">My Profile</li>
+        <% if user_signed_in? %>
+          <li class="desktop">
+          <%= link_to "My Profile", pages_dashboard_path, :class => "header_link_to" %>
+        </li>
+        <% else %>
+        <li class="desktop">
+          <%= link_to "Log In", new_user_session_path, :class => "header_link_to" %>
+        </li>
+        <% end %>
         <li id="mobile_burger"><a tabindex="0">menu</a></li>
       </ul>
     </div>

@@ -8,7 +8,7 @@
 
   <div class="field">
     <%= f.label :password %><br />
-    <%= f.password_field :password, :class => "form_string" autocomplete: "current-password" %>
+    <%= f.password_field :password, :class => "form_string", autocomplete: "current-password" %>
   </div>
 
   <% if devise_mapping.rememberable? %>
@@ -20,6 +20,7 @@
 
   <div class="actions">
     <%= f.submit "Log in", :class => "square_button" %>
+    <%= button_to "Register", new_registration_path, :class => "square_button"
   </div>
 <% end %>
 
