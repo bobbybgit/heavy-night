@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  group_id: one
+  venue_id: one
+  date: 2023-01-27
+  start_time: 2023-01-27 07:15:53
+  end_time: 2023-01-27 07:15:53
+  event_settings_id: one
+  play_session_id: one
+
+two:
+  name: MyString
+  group_id: two
+  venue_id: two
+  date: 2023-01-27
+  start_time: 2023-01-27 07:15:53
+  end_time: 2023-01-27 07:15:53
+  event_settings_id: two
+  play_session_id: two

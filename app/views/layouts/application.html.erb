@@ -17,34 +17,42 @@
   <body>
     <div class="header"></div>
     <div id="header_plus_menu">
-    <div class="header">
-      <%= link_to root_path, :class => "site_name" do %>
-        <h1>HEAVY NIGHT</h1>
+      <div class="header">
+        <%= link_to root_path, :class => "site_name" do %>
+          <h1>HEAVY NIGHT</h1>
         <% end %>
-      <ul id="header_links">
-        <li class="desktop">
-          <%= link_to "Groups", groups_path, :class => "header_link_to" %>
-        </li>
-        <li class="desktop">Events</li>
-        <% if user_signed_in? %>
+        <ul id="header_links">
           <li class="desktop">
-          <%= link_to "My Profile", pages_dashboard_path, :class => "header_link_to" %>
-        </li>
-        <% else %>
-        <li class="desktop">
-          <%= link_to "Log In", new_user_session_path, :class => "header_link_to" %>
-        </li>
+            <%= link_to "Groups", groups_path, :class => "header_link_to" %>
+          </li>
+          <li class="desktop">Events</li>
+          <% if user_signed_in? %>
+            <li class="desktop">
+              <%= link_to "My Profile", pages_dashboard_path, :class => "header_link_to" %>
+            </li>
+          <% else %>
+            <li class="desktop">
+              <%= link_to "Log In", new_user_session_path, :class => "header_link_to" %>
+            </li>
+          <% end %>
+          <li id="mobile_burger"><a tabindex="0">menu</a></li>
+        </ul>
+      </div>
+      <div id="mobile_menu">
+        <% if user_signed_in? %>
+          <%= link_to pages_dashboard_path, :class => "mobile_link_to" do %>
+            <div class="mobile">My Profile</div>
+          <% end %>
+        <% else %> 
+          <%= link_to new_user_session_path, :class => "mobile_link_to" do %>
+            <div class="mobile">Log In</div>
+          <% end %>
         <% end %>
-        <li id="mobile_burger"><a tabindex="0">menu</a></li>
-      </ul>
-    </div>
-    <div id="mobile_menu">
-        <div class="mobile">My Profile</div>
         <%= link_to groups_path, :class => "mobile_link_to" do %>
-                  <div class="mobile">Groups</div>
+          <div class="mobile">Groups</div>
         <% end %>
         <div class="mobile">Events</div>
-    </div>
+      </div>
     </div>
     
     <div id="main_window">

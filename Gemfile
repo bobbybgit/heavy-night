@@ -75,9 +75,11 @@ group :production do
   gem "pg"
 end
 
-gem "carrierwave"
+gem "carrierwave" #Image Upload
 
-gem "mini_magick"
+gem "mini_magick" #Image resizing within carrierwave
 
-gem "devise"
+gem "devise" #User login/authentication etc
+
+gem "bgg" #Interacts with Boardgame Geek API
 

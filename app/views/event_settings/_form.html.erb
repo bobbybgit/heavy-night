@@ -1,0 +1,52 @@
+<%= form_with(model: event_setting) do |form| %>
+  <% if event_setting.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(event_setting.errors.count, "error") %> prohibited this event_setting from being saved:</h2>
+
+      <ul>
+        <% event_setting.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :min_per_group, style: "display: block" %>
+    <%= form.number_field :min_per_group %>
+  </div>
+
+  <div>
+    <%= form.label :max_per_group, style: "display: block" %>
+    <%= form.number_field :max_per_group %>
+  </div>
+
+  <div>
+    <%= form.label :use_rec_player_count, style: "display: block" %>
+    <%= form.check_box :use_rec_player_count %>
+  </div>
+
+  <div>
+    <%= form.label :max_game_length, style: "display: block" %>
+    <%= form.number_field :max_game_length %>
+  </div>
+
+  <div>
+    <%= form.label :min_game_length, style: "display: block" %>
+    <%= form.number_field :min_game_length %>
+  </div>
+
+  <div>
+    <%= form.label :max_weight, style: "display: block" %>
+    <%= form.number_field :max_weight %>
+  </div>
+
+  <div>
+    <%= form.label :min_weight, style: "display: block" %>
+    <%= form.number_field :min_weight %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

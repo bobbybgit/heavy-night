@@ -1,0 +1,2 @@
+class EventSetting < ApplicationRecord
+end
