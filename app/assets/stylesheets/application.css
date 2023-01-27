@@ -14,11 +14,27 @@
  *= require_self
  */
  
+
+ :root {
+    --main: #FFFFFF;
+    --mainDark: #DDDDDD;
+    --mainLight: #FFFFFF;
+    --secondary: #5C77FF;
+    --secondaryDark: #3A55DD;
+    --secondaryLight: #7E99FF;
+    --highlight: #63CF77;
+    --highlightDark: #41AD55;
+    --highlightLight: #62CF77;
+    --textMain: #000000;
+    --textSecondary: #FFFFFF;
+    --textHighlight: #FFFFFF;
+  }
+
  body{
      display:flex;
      min-height: 100vh;
      flex-direction: column;
-     background-color: #FFFFFF;
+     background-color: var(--main);
      font-family: 'Roboto', sans-serif;
      margin: 0;
      justify-content: flex-start;
@@ -32,14 +48,14 @@
  .header_link_to{
       font-family: 'Roboto', sans-serif;
       font-size: 18px;
-      color: #FFFFFF;
+      color: var(--textSecondary);
       text-decoration: none;
      
  }
  
  .header, #footer{
-     background-color: #912F56;
-     color: #FFFFFF;
+     background-color: var(--secondary);
+     color: var(--textSecondary);
      display: flex;
      flex: 0;
      align-items: center;
@@ -80,12 +96,12 @@
  
  .header, .site_name{
      font-size: 30px;
-     font-weight: 400;
+     font-weight: 800;
      min-height: 4rem;
      letter-spacing: 0.2rem;
      justify-content: space-between;
      text-decoration: none;
-     color: #FFFFFF;
+     color: var(--textSecondary);
      align-items: center;
      
  }
@@ -95,6 +111,7 @@
      top: 0;
      left: 0;
      right: 0;
+     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.1);
  }
  
  @media screen and (max-width: 750px) {
@@ -116,7 +133,7 @@
   direction: ltr;
   -webkit-font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased;
-  color: #FFFFFF;
+  color: var(--textSecondary);
 }
 
  .new_btn span{
@@ -132,7 +149,7 @@
   direction: ltr;
   -webkit-font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased;
-  color: #FFFFFF;
+  color: var(--textHighlight);
   vertical-align: middle;
  }
  
@@ -140,7 +157,7 @@
 #main_window{
     margin: 1rem 3rem;
     padding: 1rem;
-    background-color: #FFFFFF;
+    background-color: var(--main);
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -181,7 +198,7 @@
     display: flex;
     flex-wrap: wrap;
     padding-bottom: 2rem;
-    border-bottom: 5px solid #DF9A57;
+    border-bottom: 5px solid var(--highlight);
     margin-bottom: 2rem;
 }
 
@@ -228,8 +245,8 @@
 }
 
 #mobile_menu{
-    background-color: #912F56;
-    color: #FFFFFF;
+    background-color: var(--secondary);
+    color: var(--textSecondary);
     display: none;
     flex-direction: column;
     flex: 0;
@@ -244,7 +261,7 @@
     min-width: 100vw;
     border-style: solid;
     border-width: 2px 2px 0 2px;
-    border-color: #FFFFFF;
+    border-color: var(--main);
     margin: 0;
     padding: 10px;
     display: flex;
@@ -288,7 +305,7 @@
 }
 
 .new_btn{
-    background-color: #DF9A57;
+    background-color: var(--highlight);
     border-radius: 50%;
     border: 0;
     padding: 10px;
@@ -301,7 +318,7 @@
     white-space: nowrap;
     word-wrap: normal;
     direction: ltr;
-    color: #FFFFFF;
+    color: var(--textSecondary);
     margin: 10px;
     position: fixed;
     bottom: 3rem;
@@ -309,14 +326,14 @@
 }
 
 .square_button{
-    background-color: #DF9A57;
-    border: solid 2px #CE8946;
+    background-color: var(--highlight);
+    border: solid 2px var(--highlightDark);
     border-radius: 4px;
     padding: 6px 10px;
     font-weight: normal;
     font-style: normal;
     font-size: 14px;
-    color: #FFFFFF;
+    color: var(--textHighlight);
     margin: 6px;
 }
 
@@ -328,8 +345,8 @@
 
 .form_string, .form_text{
     border-style: none;
-    border-bottom: 2px solid #DF9A57;
-    background-color: rgba(223, 154, 87, 0.2);
+    border-bottom: 2px solid var(--highlight);
+    background-color: rgba(99, 207, 99, 0.2);
     max-width: 75vw;
     width: 400px;
     font-size: 16px;
@@ -388,7 +405,7 @@
 .mobile_link_to{
     text-decoration: none;
     font-size: 20px;
-    color: #FFFFFF;
+    color: var(--textSecondary);
 
 }
 

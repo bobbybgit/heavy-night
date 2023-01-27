@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_27_072350) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_27_075827) do
+  create_table "event_settings", force: :cascade do |t|
+    t.integer "min_per_group"
+    t.integer "max_per_group"
+    t.boolean "use_rec_player_count"
+    t.integer "max_game_length"
+    t.integer "min_game_length"
+    t.integer "max_weight"
+    t.integer "min_weight"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "events", force: :cascade do |t|
     t.string "name"
     t.integer "group_id_id", null: false
