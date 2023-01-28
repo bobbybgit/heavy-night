@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @play_session %>
+
+<div>
+  <%= link_to "Edit this play session", edit_play_session_path(@play_session) %> |
+  <%= link_to "Back to play sessions", play_sessions_path %>
+
+  <%= button_to "Destroy this play session", @play_session, method: :delete %>
+</div>

@@ -1,0 +1,27 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  game_id: 1
+  weight: 1.5
+  rating: 1.5
+  min_players: 1
+  max_players: 1
+  rec_min_players: 1
+  rec_max_players: 1
+  image: MyString
+  player: one
+  venue: one
+  venue_owned: false
+
+two:
+  game_id: 1
+  weight: 1.5
+  rating: 1.5
+  min_players: 1
+  max_players: 1
+  rec_min_players: 1
+  rec_max_players: 1
+  image: MyString
+  player: two
+  venue: two
+  venue_owned: false

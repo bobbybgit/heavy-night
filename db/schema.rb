@@ -10,7 +10,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_27_075827) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_27_203849) do
+  create_table "attendances", force: :cascade do |t|
+    t.integer "event_id", null: false
+    t.integer "user_id", null: false
+    t.integer "play_session_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_attendances_on_event_id"
+    t.index ["play_session_id"], name: "index_attendances_on_play_session_id"
+    t.index ["user_id"], name: "index_attendances_on_user_id"
+  end
+
+  create_table "collections", force: :cascade do |t|
+    t.integer "game_id"
+    t.float "weight"
+    t.float "rating"
+    t.integer "min_players"
+    t.integer "max_players"
+    t.integer "rec_min_players"
+    t.integer "rec_max_players"
+    t.string "image"
+    t.integer "player_id", null: false
+    t.integer "venue_id", null: false
+    t.boolean "venue_owned"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["player_id"], name: "index_collections_on_player_id"
+    t.index ["venue_id"], name: "index_collections_on_venue_id"
+  end
+
   create_table "event_settings", force: :cascade do |t|
     t.integer "min_per_group"
     t.integer "max_per_group"
@@ -50,6 +79,18 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_27_075827) do
     t.string "image"
   end
 
+  create_table "locations", force: :cascade do |t|
+    t.string "street_address"
+    t.string "city"
+    t.string "region"
+    t.string "country"
+    t.string "code"
+    t.float "longitude"
+    t.float "latitude"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "memberships", force: :cascade do |t|
     t.integer "group_id_id", null: false
     t.integer "user_id_id", null: false
@@ -57,6 +98,19 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_27_075827) do
     t.datetime "updated_at", null: false
     t.index ["group_id_id"], name: "index_memberships_on_group_id_id"
     t.index ["user_id_id"], name: "index_memberships_on_user_id_id"
+  end
+
+  create_table "play_sessions", force: :cascade do |t|
+    t.integer "collection_id", null: false
+    t.integer "slot_number"
+    t.integer "max_slots"
+    t.integer "user_id", null: false
+    t.integer "event_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["collection_id"], name: "index_play_sessions_on_collection_id"
+    t.index ["event_id"], name: "index_play_sessions_on_event_id"
+    t.index ["user_id"], name: "index_play_sessions_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -71,10 +125,28 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_27_075827) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "venues", force: :cascade do |t|
+    t.integer "capacity"
+    t.integer "location_id", null: false
+    t.boolean "private"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["location_id"], name: "index_venues_on_location_id"
+  end
+
+  add_foreign_key "attendances", "events"
+  add_foreign_key "attendances", "play_sessions"
+  add_foreign_key "attendances", "users"
+  add_foreign_key "collections", "players"
+  add_foreign_key "collections", "venues"
   add_foreign_key "events", "event_settings_ids"
   add_foreign_key "events", "group_ids"
   add_foreign_key "events", "play_session_ids"
   add_foreign_key "events", "venue_ids"
   add_foreign_key "memberships", "group_ids"
   add_foreign_key "memberships", "user_ids"
+  add_foreign_key "play_sessions", "collections"
+  add_foreign_key "play_sessions", "events"
+  add_foreign_key "play_sessions", "users"
+  add_foreign_key "venues", "locations"
 end

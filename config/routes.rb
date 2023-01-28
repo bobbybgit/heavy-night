@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :locations
+  resources :play_sessions
+  resources :attendances
+  resources :collections
+  resources :venues
   resources :event_settings
   resources :memberships
   resources :events

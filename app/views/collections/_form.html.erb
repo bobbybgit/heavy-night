@@ -1,0 +1,72 @@
+<%= form_with(model: collection) do |form| %>
+  <% if collection.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(collection.errors.count, "error") %> prohibited this collection from being saved:</h2>
+
+      <ul>
+        <% collection.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :game_id, style: "display: block" %>
+    <%= form.number_field :game_id %>
+  </div>
+
+  <div>
+    <%= form.label :weight, style: "display: block" %>
+    <%= form.text_field :weight %>
+  </div>
+
+  <div>
+    <%= form.label :rating, style: "display: block" %>
+    <%= form.text_field :rating %>
+  </div>
+
+  <div>
+    <%= form.label :min_players, style: "display: block" %>
+    <%= form.number_field :min_players %>
+  </div>
+
+  <div>
+    <%= form.label :max_players, style: "display: block" %>
+    <%= form.number_field :max_players %>
+  </div>
+
+  <div>
+    <%= form.label :rec_min_players, style: "display: block" %>
+    <%= form.number_field :rec_min_players %>
+  </div>
+
+  <div>
+    <%= form.label :rec_max_players, style: "display: block" %>
+    <%= form.number_field :rec_max_players %>
+  </div>
+
+  <div>
+    <%= form.label :image, style: "display: block" %>
+    <%= form.text_field :image %>
+  </div>
+
+  <div>
+    <%= form.label :player_id, style: "display: block" %>
+    <%= form.text_field :player_id %>
+  </div>
+
+  <div>
+    <%= form.label :venue_id, style: "display: block" %>
+    <%= form.text_field :venue_id %>
+  </div>
+
+  <div>
+    <%= form.label :venue_owned, style: "display: block" %>
+    <%= form.check_box :venue_owned %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

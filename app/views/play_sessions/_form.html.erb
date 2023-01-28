@@ -1,0 +1,42 @@
+<%= form_with(model: play_session) do |form| %>
+  <% if play_session.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(play_session.errors.count, "error") %> prohibited this play_session from being saved:</h2>
+
+      <ul>
+        <% play_session.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :collection_id, style: "display: block" %>
+    <%= form.text_field :collection_id %>
+  </div>
+
+  <div>
+    <%= form.label :slot_number, style: "display: block" %>
+    <%= form.number_field :slot_number %>
+  </div>
+
+  <div>
+    <%= form.label :max_slots, style: "display: block" %>
+    <%= form.number_field :max_slots %>
+  </div>
+
+  <div>
+    <%= form.label :user_id, style: "display: block" %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div>
+    <%= form.label :event_id, style: "display: block" %>
+    <%= form.text_field :event_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
