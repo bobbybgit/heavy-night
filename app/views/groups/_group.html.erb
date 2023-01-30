@@ -24,7 +24,8 @@
   <% if !current_user.member?(group) %>
     <%= button_to "Join", new_group_membership_path(group), :class => "square_button", :id => "group_join_leave_button", :method => :get %>
   <% else %>
-    <button class="square_button", id="group_join_leave_button">Leave</button>
+    <% membership = Membership.find_by group_id: group.id, user_id: current_user.id %>
+    <%= button_to "Leave", group_membership_path(group, membership), :class => "square_button", :id => "group_join_leave_button", :method => :delete %>
   <% end %>
   <%= button_to "All Groups", groups_path, :class => "square_button", :method => :get %>
   </div>
