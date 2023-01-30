@@ -9,25 +9,31 @@
   <h1 class ="item_header" id="group_item_header">
     <%= group.name %>
     </h1>
-  <p>
+  <p class="location">
     <%= group.location %>
   </p>
 
-  <p>
+  <p class="description">
     <%= group.description %>
   </p>
-  <h4>
+  
+
+  </div>
+
+</div>
+<h4>
     Members
   </h4>
-  <ul class="member_list">
+  <div class="member_list">
   <% group.users.each do |user| %>
-    <li><div class="user_box">
+    <div class="user_box">
     <%= image_tag("defaultpp", :class =>"user_pp") %>
     <div class="user_name">
     <%= user.name %>
     </div>
-    </div></li>
+    </div>
   <% end %>
+  </div>
   </div>
   </div>
   <div class="button_group" id="group_buttons">
@@ -41,7 +47,3 @@
   <% end %>
   <%= button_to "All Groups", groups_path, :class => "square_button", :method => :get %>
   </div>
-
-  </div>
-
-</div>
