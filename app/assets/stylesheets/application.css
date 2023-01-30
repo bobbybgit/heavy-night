@@ -260,8 +260,8 @@
 #mobile_menu div {
     min-width: 100vw;
     border-style: solid;
-    border-width: 2px 2px 0 2px;
-    border-color: var(--main);
+    border-width: 2px 2px 2px 2px;
+    border-color: var(--secondary);
     margin: 0;
     padding: 10px;
     display: flex;
@@ -353,7 +353,7 @@
     line-height: 28px;
     font-family: 'Roboto', sans-serif;
     flex: auto;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
 .form_text{

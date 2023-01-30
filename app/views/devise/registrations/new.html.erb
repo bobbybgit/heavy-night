@@ -3,26 +3,39 @@
 <%= form_for(resource, as: resource_name, data: {turbo: false}, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :email %><br />
+  <div id="form_window">
+
+  <div class="form_group">
+    <%= f.label :email, style: "display: block; width: 400px; max-width: 75vw" %>
     <%= f.email_field :email, autofocus: true, :class => "form_string", autocomplete: "email" %>
   </div>
 
-  <div class="field">
-    <%= f.label :password %>
+  <div class="form_group">
+  <%= f.label :name, style: "display: block; width: 400px; max-width: 75vw" %>
+  <%= f.text_field :name,:class => "form_string", autocomplete: "name" %>
+  </div>
+
+  <div class="form_group">
+  <div style="display: block-inline; width: 400px; max-width: 75vw">
+  <nobr><%= f.label :password %>
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
+    <em>(<%= @minimum_password_length %> characters minimum)</em></nobr>
+    <% end %>
     <%= f.password_field :password, :class => "form_string", autocomplete: "new-password" %>
+  </div>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label :password_confirmation, style: "display: block; width: 400px; max-width: 75vw" %>
     <%= f.password_field :password_confirmation,:class => "form_string", autocomplete: "new-password" %>
   </div>
+
 
   <div class="actions">
     <%= f.submit "Sign up", :class => "square_button" %>
   </div>
+
+  </div>
+
 <% end %>
 
