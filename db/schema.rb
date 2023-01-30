@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_27_203849) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_30_100848) do
   create_table "attendances", force: :cascade do |t|
     t.integer "event_id", null: false
     t.integer "user_id", null: false
@@ -31,12 +31,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_27_203849) do
     t.integer "rec_min_players"
     t.integer "rec_max_players"
     t.string "image"
-    t.integer "player_id", null: false
     t.integer "venue_id", null: false
     t.boolean "venue_owned"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["player_id"], name: "index_collections_on_player_id"
+    t.integer "user_id", null: false
+    t.index ["user_id"], name: "index_collections_on_user_id"
     t.index ["venue_id"], name: "index_collections_on_venue_id"
   end
 
@@ -137,7 +137,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_27_203849) do
   add_foreign_key "attendances", "events"
   add_foreign_key "attendances", "play_sessions"
   add_foreign_key "attendances", "users"
-  add_foreign_key "collections", "players"
+  add_foreign_key "collections", "users"
   add_foreign_key "collections", "venues"
   add_foreign_key "events", "event_settings", column: "event_settings_id"
   add_foreign_key "events", "groups"
