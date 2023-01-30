@@ -16,6 +16,18 @@
   <p>
     <%= group.description %>
   </p>
+  <h4>
+    Members
+  </h4>
+  <ul class="member_list">
+  <% group.users.each do |user| %>
+    <li><div class="user_box">
+    <%= image_tag("defaultpp", :class =>"user_pp") %>
+    <div class="user_name">
+    <%= user.name %>
+    </div>
+    </div></li>
+  <% end %>
   </div>
   </div>
   <div class="button_group" id="group_buttons">
