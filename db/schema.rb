@@ -54,19 +54,19 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_27_203849) do
 
   create_table "events", force: :cascade do |t|
     t.string "name"
-    t.integer "group_id_id", null: false
-    t.integer "venue_id_id", null: false
+    t.integer "group_id", null: false
+    t.integer "venue_id", null: false
     t.date "date"
     t.time "start_time"
     t.time "end_time"
-    t.integer "event_settings_id_id", null: false
-    t.integer "play_session_id_id", null: false
+    t.integer "event_settings_id", null: false
+    t.integer "play_session_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["event_settings_id_id"], name: "index_events_on_event_settings_id_id"
-    t.index ["group_id_id"], name: "index_events_on_group_id_id"
-    t.index ["play_session_id_id"], name: "index_events_on_play_session_id_id"
-    t.index ["venue_id_id"], name: "index_events_on_venue_id_id"
+    t.index ["event_settings_id"], name: "index_events_on_event_settings_id"
+    t.index ["group_id"], name: "index_events_on_group_id"
+    t.index ["play_session_id"], name: "index_events_on_play_session_id"
+    t.index ["venue_id"], name: "index_events_on_venue_id"
   end
 
   create_table "groups", force: :cascade do |t|
@@ -92,12 +92,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_27_203849) do
   end
 
   create_table "memberships", force: :cascade do |t|
-    t.integer "group_id_id", null: false
-    t.integer "user_id_id", null: false
+    t.integer "group_id", null: false
+    t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["group_id_id"], name: "index_memberships_on_group_id_id"
-    t.index ["user_id_id"], name: "index_memberships_on_user_id_id"
+    t.index ["group_id"], name: "index_memberships_on_group_id"
+    t.index ["user_id"], name: "index_memberships_on_user_id"
   end
 
   create_table "play_sessions", force: :cascade do |t|
@@ -139,12 +139,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_27_203849) do
   add_foreign_key "attendances", "users"
   add_foreign_key "collections", "players"
   add_foreign_key "collections", "venues"
-  add_foreign_key "events", "event_settings_ids"
-  add_foreign_key "events", "group_ids"
-  add_foreign_key "events", "play_session_ids"
-  add_foreign_key "events", "venue_ids"
-  add_foreign_key "memberships", "group_ids"
-  add_foreign_key "memberships", "user_ids"
+  add_foreign_key "events", "event_settings", column: "event_settings_id"
+  add_foreign_key "events", "groups"
+  add_foreign_key "events", "play_sessions"
+  add_foreign_key "events", "venues"
+  add_foreign_key "memberships", "groups"
+  add_foreign_key "memberships", "users"
   add_foreign_key "play_sessions", "collections"
   add_foreign_key "play_sessions", "events"
   add_foreign_key "play_sessions", "users"

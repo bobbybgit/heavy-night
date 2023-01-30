@@ -1,5 +1,8 @@
 class Group < ApplicationRecord
 
+    has_many :memberships
+    has_many :users, :through => :memberships
+
     require 'carrierwave/processing/rmagick'
     require 'carrierwave/processing/mini_magick'
     
@@ -9,5 +12,8 @@ class Group < ApplicationRecord
     validates :location, length: {maximum: 500 }
 
     mount_uploader :image, ImageUploader
+
+
+    
     
 end

@@ -1,8 +1,9 @@
 class GroupsController < ApplicationController
   before_action :set_group, only: %i[ show edit update destroy ]
   include CarrierWave::MiniMagick
-
-  # GET /groups or /groups.json
+  
+  
+    # GET /groups or /groups.json
   def index
     @groups = Group.all.order(:name)
   end

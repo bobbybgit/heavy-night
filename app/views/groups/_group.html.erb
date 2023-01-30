@@ -20,8 +20,12 @@
   </div>
   <div class="button_group" id="group_buttons">
   <%= button_to "Edit", edit_group_path, :class => "square_button", :method => :get %> 
-  <%= button_to "Delete", group_path, :class => "square_button", :method => :delete %> 
-  <button class="square_button" #id="group_join_leave_button">Join</button>
+  <%= button_to "Delete", group_path, :class => "square_button", :method => :delete %>
+  <% if !current_user.member?(group) %>
+    <%= button_to "Join", new_group_membership_path(group), :class => "square_button", :id => "group_join_leave_button", :method => :get %>
+  <% else %>
+    <button class="square_button", id="group_join_leave_button">Leave</button>
+  <% end %>
   <%= button_to "All Groups", groups_path, :class => "square_button", :method => :get %>
   </div>
 
